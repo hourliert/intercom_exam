@@ -4,6 +4,8 @@
 library intercom_test;
 
 export 'src/flatten.dart';
+
+export 'src/earth_position.dart';
 export 'src/service.dart';
 export 'src/settings.dart';
 export 'src/user_locator.dart';

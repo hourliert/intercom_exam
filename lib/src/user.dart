@@ -7,17 +7,16 @@ part of intercom_test.service;
 class User implements Comparable<User> {
   final int id;
   final String name;
-  final num latitude;
-  final num longitude;
+  final EarthPosition position;
 
   User.fromJSON(Map data)
       : id = data['user_id'],
         name = data['name'],
-        latitude = num.parse(data['latitude']),
-        longitude = num.parse(data['longitude']);
+        position = new EarthPosition(
+            num.parse(data['latitude']), num.parse(data['longitude']));
 
   @override
-  String toString() => '$id, $name';
+  String toString() => 'User: $id, $name, $position';
 
   @override
   int compareTo(User other) => id - other.id;

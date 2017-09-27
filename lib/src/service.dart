@@ -9,6 +9,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
+import 'earth_position.dart';
 import 'settings.dart';
 
 part 'user.dart';

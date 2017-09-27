@@ -1,0 +1,11 @@
+language: dart
+
+dart:
+  - stable
+
+before_script:
+  - dartanalyzer --fatal-warnings .
+  - dartfmt --dry-run --set-exit-if-changed .
+
+script:
+  - pub run test test/*

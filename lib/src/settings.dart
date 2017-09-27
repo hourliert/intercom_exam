@@ -4,10 +4,11 @@
 
 library intercom_test.settings;
 
+import 'earth_position.dart';
+
 class LocatorSettings {
   final String endpoint;
-  final num officeLatitude;
-  final num officeLongitude;
+  final EarthPosition officePosition;
 
-  LocatorSettings({this.endpoint, this.officeLatitude, this.officeLongitude});
+  LocatorSettings({this.endpoint, this.officePosition});
 }
