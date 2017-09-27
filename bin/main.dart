@@ -3,7 +3,7 @@
 
 import 'package:http/http.dart';
 
-import 'package:intercom_test/intercom_test.dart';
+import 'package:intercom_exam/intercom_exam.dart';
 
 main(List<String> arguments) async {
   final settings = new LocatorSettings(

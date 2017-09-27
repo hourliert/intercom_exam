@@ -1,16 +1,11 @@
 // Copyright (c) 2017, thomashourlier. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'package:intercom_test/intercom_test.dart'
+import 'package:intercom_exam/intercom_exam.dart'
     show flatten, lowMemoryFlatten;
 import 'package:test/test.dart';
 
-class TestData {
-  final List input;
-  final List<int> output;
-
-  TestData({this.input, this.output});
-}
+import 'test_data.dart';
 
 void main() {
   final dataSet = [
@@ -56,11 +51,11 @@ void main() {
     ),
   ];
 
-  test('flatten', () {
+  test('naive', () {
     dataSet.forEach((t) => expect(flatten(t.input), t.output));
   });
 
-  test('lowMemoryFlatten', () {
+  test('low memory', () {
     dataSet.forEach((t) => expect(lowMemoryFlatten(t.input), t.output));
   });
 }
