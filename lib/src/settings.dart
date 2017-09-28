@@ -6,9 +6,14 @@ library intercom_test.settings;
 
 import 'earth_position.dart';
 
+/// Application wide settings
 class LocatorSettings {
+  /// API endpoint to fetch users
   final String endpoint;
+
+  /// Intercom office position
   final EarthPosition officePosition;
 
+  /// Creates a new [LocatorSettings]
   LocatorSettings({this.endpoint, this.officePosition});
 }

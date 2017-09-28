@@ -3,8 +3,8 @@
 // that can be found in the LICENSE file.
 
 class TestData<I, O> {
-  final List<I> input;
-  final List<O> output;
+  final I input;
+  final O output;
 
   TestData({this.input, this.output});
 }

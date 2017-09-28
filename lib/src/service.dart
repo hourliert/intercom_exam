@@ -14,12 +14,17 @@ import 'settings.dart';
 
 part 'user.dart';
 
+/// Interacts with the user API
 class UserService {
   final Client _client;
   final LocatorSettings _settings;
 
+  /// Creates a new [UserService]
   UserService(this._client, this._settings);
 
+  /// Fetches a list of user
+  ///
+  /// The HTTP response should be JSON-line separated.
   Future<List<User>> fetchUser() async {
     final response = await _client.get(_settings.endpoint);
 

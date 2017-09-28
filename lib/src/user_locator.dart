@@ -9,18 +9,28 @@ import 'dart:async';
 import 'service.dart';
 import 'settings.dart';
 
+/// Represents a user locator
+///
+/// This object is able to retrieve users on a API and find all users in the radius
+/// from the [LocatorSettings.officePosition].
 class UserLocator {
   final UserService _service;
   final LocatorSettings _settings;
 
+  /// Creates a new UserLocator
   UserLocator(this._service, this._settings);
 
+  /// Finds the nearest users within [radius]
   Future<List<User>> findNearestUser(num radius) async {
     final users = await _service.fetchUser();
 
     return users
         .where((u) => u.position.distanceTo(_settings.officePosition) < radius)
-        .toList()
-          ..sort();
+        .toList();
   }
+
+  /// Finds the nearest user within [radius] and order them by ID ascending
+  Future<List<User>> findOrderedNearestUser(num radius) async =>
+      await findNearestUser(radius)
+        ..sort();
 }

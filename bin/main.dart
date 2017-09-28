@@ -21,7 +21,7 @@ main(List<String> arguments) async {
     settings,
   );
 
-  final users = await userLocator.findNearestUser(100);
+  final users = await userLocator.findOrderedNearestUser(100);
 
   print(users);
 }

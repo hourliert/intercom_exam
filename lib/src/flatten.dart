@@ -4,6 +4,7 @@
 
 library intercom_test.flatten;
 
+/// Flattens an n-dimension array of int into a 1-array of int.
 List<int> flatten(List array) {
   if (array.isEmpty) {
     return [];
@@ -19,6 +20,9 @@ List<int> flatten(List array) {
   }
 }
 
+/// Flattens an n-dimension array of int into a 1-array of int.
+///
+/// This function uses less memory than [flatten].
 List<int> lowMemoryFlatten(List array, [int index = 0]) {
   if (index >= array.length) {
     return [];
