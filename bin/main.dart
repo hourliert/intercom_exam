@@ -12,7 +12,7 @@ main(List<String> arguments) async {
     officePosition: new EarthPosition(53.3393, -6.2576841),
   );
 
-  // Instantiates the [UserLocator] in respect fo dependency injection
+  // Instantiates the [UserLocator] in respect of dependency injection
   final userLocator = new UserLocator(
     new UserService(
       new Client(),
@@ -23,7 +23,7 @@ main(List<String> arguments) async {
 
   print('=== FETCHING NEARED USERS FROM ${settings.officePosition} ===');
 
-  final users = await userLocator.findOrderedNearestUser(100);
+  final users = await userLocator.findOrderedNearestUsers(100);
 
   print('=== ORDERER NEAREST USERS: $users ===');
 }

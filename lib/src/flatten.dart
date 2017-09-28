@@ -2,9 +2,9 @@
 // Use of this source code is governed by a MIT-style license
 // that can be found in the LICENSE file.
 
-library intercom_test.flatten;
+library intercom_exam.flatten;
 
-/// Flattens an n-dimension array of int into a 1-array of int.
+/// Flattens an n-dimensions array of int into a 1-array of int.
 List<int> flatten(List array) {
   if (array.isEmpty) {
     return [];
@@ -20,7 +20,7 @@ List<int> flatten(List array) {
   }
 }
 
-/// Flattens an n-dimension array of int into a 1-array of int.
+/// Flattens an n-dimensions array of int into a 1-array of int.
 ///
 /// This function uses less memory than [flatten].
 List<int> lowMemoryFlatten(List array, [int index = 0]) {

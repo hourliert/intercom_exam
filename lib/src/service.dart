@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT-style license
 // that can be found in the LICENSE file.
 
-library intercom_test.service;
+library intercom_exam.service;
 
 import 'dart:async';
 import 'dart:convert';
@@ -22,10 +22,10 @@ class UserService {
   /// Creates a new [UserService]
   UserService(this._client, this._settings);
 
-  /// Fetches a list of user
+  /// Fetches a list of users
   ///
   /// The HTTP response should be JSON-line separated.
-  Future<List<User>> fetchUser() async {
+  Future<List<User>> fetchUsers() async {
     final response = await _client.get(_settings.endpoint);
 
     final rows = response.body.split('\n');

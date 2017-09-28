@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT-style license
 // that can be found in the LICENSE file.
 
-library intercom_test.earth_position;
+library intercom_exam.earth_position;
 
 import 'dart:math';
 

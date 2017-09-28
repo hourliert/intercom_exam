@@ -29,7 +29,7 @@ void main() {
     final userService = new UserServiceMock();
     final settings = new LocatorSettingsMock();
 
-    when(userService.fetchUser()).thenReturn(new Future.value([
+    when(userService.fetchUsers()).thenReturn(new Future.value([
       new User.fromJSON({
         "latitude": "52.986375",
         "user_id": 12,
@@ -58,7 +58,7 @@ void main() {
 
   test('findNearestUser', () async {
     for (var t in dataSet) {
-      final users = await locator.findNearestUser(t.input);
+      final users = await locator.findNearestUsers(t.input);
 
       expect(users, t.output);
     }

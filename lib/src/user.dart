@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT-style license
 // that can be found in the LICENSE file.
 
-part of intercom_test.service;
+part of intercom_exam.service;
 
 /// Represents a user
 ///

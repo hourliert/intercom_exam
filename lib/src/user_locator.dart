@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT-style license
 // that can be found in the LICENSE file.
 
-library intercom_test.locator;
+library intercom_exam.locator;
 
 import 'dart:async';
 
@@ -21,16 +21,16 @@ class UserLocator {
   UserLocator(this._service, this._settings);
 
   /// Finds the nearest users within [radius]
-  Future<List<User>> findNearestUser(num radius) async {
-    final users = await _service.fetchUser();
+  Future<List<User>> findNearestUsers(num radius) async {
+    final users = await _service.fetchUsers();
 
     return users
         .where((u) => u.position.distanceTo(_settings.officePosition) < radius)
         .toList();
   }
 
-  /// Finds the nearest user within [radius] and order them by ID ascending
-  Future<List<User>> findOrderedNearestUser(num radius) async =>
-      await findNearestUser(radius)
+  /// Finds the nearest users within [radius] and order them by ID ascending
+  Future<List<User>> findOrderedNearestUsers(num radius) async =>
+      await findNearestUsers(radius)
         ..sort();
 }
