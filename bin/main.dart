@@ -21,7 +21,9 @@ main(List<String> arguments) async {
     settings,
   );
 
+  print('=== FETCHING NEARED USERS FROM ${settings.officePosition} ===');
+
   final users = await userLocator.findOrderedNearestUser(100);
 
-  print(users);
+  print('=== ORDERER NEAREST USERS: $users ===');
 }
